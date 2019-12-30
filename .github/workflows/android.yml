@@ -9,28 +9,6 @@ env:
 
 
 jobs:
-
-  cache_build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v1
-      - name: Cache gradle modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.gradle/caches
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      - uses: actions/checkout@v1
-      - name: set up JDK 1.8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-      - name: Build with Gradle
-        run: ./gradlew build
-
   debug_apk:
     needs: cache_build
     name: Generate Debug APK
@@ -62,7 +40,7 @@ jobs:
           path: app/build/outputs/apk/debug
 
   signed_apk:
-    needs: cache_build
+    needs: debug_apk
     name: Generate Signed APK
     runs-on: ubuntu-latest
 
@@ -92,7 +70,7 @@ jobs:
           path: app/build/outputs/apk/release
 
   signed_bundle:
-    needs: cache_build
+    needs: debug_apk
     name: Generate Signed Bundle
     runs-on: ubuntu-latest
 
