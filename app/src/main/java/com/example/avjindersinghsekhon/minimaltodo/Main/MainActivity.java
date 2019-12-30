@@ -3,7 +3,7 @@ package com.example.avjindersinghsekhon.minimaltodo.Main;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.core.app.Fragment;
+import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;

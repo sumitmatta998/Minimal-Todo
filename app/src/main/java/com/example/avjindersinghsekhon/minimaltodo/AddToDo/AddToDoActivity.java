@@ -1,8 +1,9 @@
 package com.example.avjindersinghsekhon.minimaltodo.AddToDo;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
-import androidx.core.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 import com.example.avjindersinghsekhon.minimaltodo.AppDefault.AppDefaultActivity;
 import com.example.avjindersinghsekhon.minimaltodo.R;

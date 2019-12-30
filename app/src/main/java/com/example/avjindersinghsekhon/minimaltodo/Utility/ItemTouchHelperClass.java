@@ -1,7 +1,7 @@
 package com.example.avjindersinghsekhon.minimaltodo.Utility;
 
-import androidx.appcompat.widget.RecyclerView;
 import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ItemTouchHelperClass extends ItemTouchHelper.Callback {
     private ItemTouchHelperAdapter adapter;
