@@ -91,9 +91,10 @@ jobs:
           name: release_apk
           path: app/build/outputs/apk/release
 
-
-
   signed_bundle:
+    name: Generate Signed Bundle
+    runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v1
       - name: Cache gradle modules
