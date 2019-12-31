@@ -56,10 +56,12 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./app/build/outputs/apk/debug
           asset_name: debug_apk
+          asset_content_type: application/zip
 
       - name: Upload APK
         uses: actions/upload-artifact@v1
         with:
           name: debug_apk
           path: app/build/outputs/apk/debug
+
 
