@@ -3,7 +3,7 @@ name: Android CI
 on:
   push:
     tags:
-      ci/*
+      ci/*.*.*.*-*
 
 env:
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -13,7 +13,6 @@ env:
 
 jobs:
   debug_apk:
-    needs: cache_build
     name: Generate Debug APK
     runs-on: ubuntu-latest
 
