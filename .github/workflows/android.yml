@@ -1,6 +1,9 @@
 name: Android CI
 
-on: [push]
+on:
+  push:
+    tags:
+      ci/*
 
 env:
   KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
